@@ -1,4 +1,4 @@
-
+import { Analytics } from "@vercel/analytics/react"
 import React, { useEffect, useState } from 'react';
 import { TOOLS } from '../data';
 import { RoiCalculator, WordCounter, KeywordGenerator, PasswordGenerator, KeyChecker, CPSTester, BinaryConverter, CaseConverter, LoremIpsumGenerator, JsonFormatter, ColorConverter } from '../components/Tools';

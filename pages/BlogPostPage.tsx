@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 import { BLOG_POSTS, TOOLS } from '../data';
 import { NavigateFunction, Comment } from '../types';
 

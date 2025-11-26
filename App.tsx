@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from "@vercel/analytics/next"
 import { Layout } from './components/Layout';
 import { AdBlockModal } from './components/AdBlockModal';
 import { HomePage } from './pages/HomePage';

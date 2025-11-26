@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 import { TOOLS, BLOG_POSTS, SUGGESTED_DOMAINS, GENERAL_FAQ } from '../data';
 import { NavigateFunction } from '../types';
 
@@ -46,7 +47,7 @@ export const HomePage: React.FC<Props> = ({ navigate }) => {
           <div className="container mx-auto px-4">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-slate-800">
                   <div>
-                      <div className="text-3xl font-bold text-white mb-1">5M+</div>
+                      <div className="text-3xl font-bold text-white mb-1">1M+</div>
                       <div className="text-slate-400 text-sm font-medium">Tools Used</div>
                   </div>
                   <div>

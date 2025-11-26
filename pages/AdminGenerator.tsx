@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 import { GoogleGenAI } from "@google/genai";
 
 const MOCK_ANALYTICS = {
