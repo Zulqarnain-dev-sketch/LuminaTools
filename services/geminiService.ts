@@ -1,6 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 
-const apiKey = process.env.API_KEY || '';
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY || '';
 
 // Initialize specific functionality for specific tools
 export const generateKeywords = async (topic: string): Promise<string[]> => {

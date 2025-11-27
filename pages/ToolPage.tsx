@@ -152,7 +152,12 @@ const GenericAiTool: React.FC<{ tool: typeof TOOLS[0] }> = ({ tool }) => {
         if (!input) return;
         setLoading(true);
         try {
-            const apiKey = process.env.API_KEY || '';
+            const apiKey = import.meta.env.VITE_GEMINI_API_KEY || '';
+            if (!apiKey) {
+                setResult('Error: API key not configured. Please contact support.');
+                setLoading(false);
+                return;
+            }
             const ai = new GoogleGenAI({ apiKey });
             const response = await ai.models.generateContent({
                 model: 'gemini-2.5-flash',
@@ -160,6 +165,7 @@ const GenericAiTool: React.FC<{ tool: typeof TOOLS[0] }> = ({ tool }) => {
             });
             setResult(response.text || 'No response generated.');
         } catch (e) {
+            console.error('AI Generation Error:', e);
             setResult('Error generating content. Please try again.');
         } finally {
             setLoading(false);
