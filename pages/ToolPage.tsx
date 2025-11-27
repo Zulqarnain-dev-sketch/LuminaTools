@@ -5,6 +5,12 @@ import { RoiCalculator, WordCounter, KeywordGenerator, PasswordGenerator, KeyChe
 import { GoogleGenAI } from "@google/genai";
 import { AdSense } from '../components/AdSense';
 
+declare global {
+  interface ImportMeta {
+    env: Record<string, string>;
+  }
+}
+
 interface Props {
   slug: string;
   navigate: (path: string) => void;
