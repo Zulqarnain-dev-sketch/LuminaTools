@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Analytics } from "@vercel/analytics/react"
 import { BLOG_POSTS, TOOLS } from '../data';
+import { AdSense } from '../components/AdSense';
 import { NavigateFunction, Comment } from '../types';
 
 interface Props {
@@ -206,10 +207,9 @@ export const BlogPostPage: React.FC<Props> = ({ slug, navigate }) => {
                     </ul>
                 </div>
 
-                {/* Ad Placeholder */}
-                <div className="h-[400px] bg-slate-100 rounded-2xl flex items-center justify-center text-slate-400 text-sm font-medium border border-dashed border-slate-300 relative overflow-hidden group cursor-default">
-                     <div className="absolute inset-0 bg-gradient-to-br from-transparent to-slate-200/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    Sponsor / Ad Space
+                {/* AdSense - sidebar ad (renders only on content pages) */}
+                <div>
+                  <AdSense className="w-full h-[400px] rounded-2xl overflow-hidden" />
                 </div>
 
                 {/* Newsletter */}

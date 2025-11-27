@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { TOOLS } from '../data';
 import { RoiCalculator, WordCounter, KeywordGenerator, PasswordGenerator, KeyChecker, CPSTester, BinaryConverter, CaseConverter, LoremIpsumGenerator, JsonFormatter, ColorConverter } from '../components/Tools';
 import { GoogleGenAI } from "@google/genai";
+import { AdSense } from '../components/AdSense';
 
 interface Props {
   slug: string;
@@ -464,10 +465,10 @@ export const ToolPage: React.FC<Props> = ({ slug, navigate }) => {
 
             {/* Sidebar */}
             <aside className="space-y-8">
-                {/* Ad Placeholder */}
-                <div className="bg-slate-50 h-[300px] rounded-2xl flex flex-col items-center justify-center text-slate-400 text-xs border border-dashed border-slate-300 relative overflow-hidden">
-                    <span className="font-bold text-lg text-slate-300 z-10">ADVERTISEMENT</span>
-                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagonal-stripes-light.png')] opacity-50"></div>
+                {/* AdSense - renders only on content pages */}
+                <div className="w-full">
+                  {/* Note: set `data-ad-slot` to your ad unit ID if available */}
+                  <AdSense className="w-full h-[300px] rounded-2xl overflow-hidden" />
                 </div>
 
                 <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm sticky top-24">
