@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://luminatools-one-eta.vercel.app/sitemap.xml
