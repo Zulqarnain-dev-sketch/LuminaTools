@@ -1,6 +1,7 @@
 import { Analytics } from "@vercel/analytics/react"
 import React, { useState, useEffect } from 'react';
 import { TOOLS } from '../data';
+import { AdSense } from '../components/AdSense';
 
 interface Props {
   navigate: (path: string) => void;
@@ -147,7 +148,16 @@ export const ToolsListPage: React.FC<Props> = ({ navigate }) => {
                 ))}
               </div>
             </div>
-          ))}
+          ))})
+        </div>
+
+        {/* AdSense Advertisement */}
+        <div className="mt-20 pt-12 border-t border-slate-100">
+            <div className="mb-6">
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Featured Sponsors</h3>
+                <p className="text-slate-500 text-sm">Supporting LuminaTools</p>
+            </div>
+            <AdSense className="w-full rounded-2xl overflow-hidden shadow-sm" style={{ maxWidth: '100%', height: 'auto' }} />
         </div>
       </div>
     </div>

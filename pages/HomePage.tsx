@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Analytics } from "@vercel/analytics/react"
 import { TOOLS, BLOG_POSTS, SUGGESTED_DOMAINS, GENERAL_FAQ } from '../data';
 import { NavigateFunction } from '../types';
+import { AdSense } from '../components/AdSense';
 
 interface Props {
   navigate: NavigateFunction;
@@ -154,6 +155,13 @@ export const HomePage: React.FC<Props> = ({ navigate }) => {
                       </div>
                   ))}
               </div>
+          </div>
+      </section>
+
+      {/* AdSense Advertisement */}
+      <section className="py-12 bg-white border-y border-slate-100">
+          <div className="container mx-auto px-4">
+              <AdSense className="w-full rounded-2xl overflow-hidden shadow-sm" style={{ maxWidth: '100%', height: 'auto' }} />
           </div>
       </section>
 
